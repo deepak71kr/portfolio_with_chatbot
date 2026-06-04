@@ -8,7 +8,8 @@ import {
   skillIcons,
   skills,
 } from "./data";
-
+import Chatbot from "./Chatbot";
+import { useEffect, useRef, useState } from "react";
 function Icon({ name, size = 18 }) {
   const common = {
     width: size,
@@ -342,7 +343,7 @@ function App() {
           </div>
         </div>
       </section>
-
+           <Chatbot />   
       <Section
         id="about"
         title={
