@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -101,7 +102,11 @@ const Chatbot = () => {
             {messages.map((msg, index) => (
               <div key={index} className={`chatbot-message-row ${msg.role === 'user' ? 'row-user' : 'row-ai'}`}>
                 <div className={`chatbot-bubble ${msg.role === 'user' ? 'bubble-user' : 'bubble-ai'}`}>
-                  {msg.content}
+                  {msg.role === 'ai' ? (
+                    <ReactMarkdown>{msg.content}</ReactMarkdown>
+                  ) : (
+                    msg.content
+                  )}
                 </div>
               </div>
             ))}

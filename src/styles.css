@@ -845,6 +845,40 @@ nav a:hover {
   border-radius: 16px 16px 16px 4px;
 }
 
+.bubble-ai p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.bubble-ai ul, .bubble-ai ol {
+  margin-left: 16px;
+  margin-bottom: 8px;
+}
+
+.bubble-ai li:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.bubble-ai code {
+  background-color: var(--bg);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+}
+
+.bubble-ai pre {
+  background-color: var(--bg);
+  padding: 8px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 8px;
+}
+
+.bubble-ai pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
 .chatbot-input-area {
   display: flex;
   padding: 16px;
