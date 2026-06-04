@@ -31,8 +31,7 @@ const Chatbot = () => {
 
     try {
       // Send the current question AND the past history to FastAPI
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
-      const response = await fetch(`${apiUrl}/chat`, {
+      const response = await fetch("https://resume-chatbot-backend-0emf.onrender.com/chat", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
