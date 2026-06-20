@@ -10,6 +10,14 @@ const Chatbot = () => {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
+  // Auto-open chatbot after 5 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Auto-scroll to the newest message
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
